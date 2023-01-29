@@ -1,7 +1,8 @@
 // Some random colors
+
 const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
 
-const numBalls = 50;
+const numBalls = 80;
 const balls = [];
 
 for (let i = 0; i < numBalls; i++) {
@@ -9,7 +10,7 @@ for (let i = 0; i < numBalls; i++) {
   ball.classList.add("ball");
   ball.style.background = colors[Math.floor(Math.random() * colors.length)];
   ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * 350)}vh`;
+  ball.style.top = `${Math.floor(Math.random() * 400)}vh`;
   ball.style.transform = `scale(${Math.random()})`;
   ball.style.width = `${Math.random()}em`;
   ball.style.height = ball.style.width;
@@ -21,8 +22,8 @@ for (let i = 0; i < numBalls; i++) {
 // Keyframes
 balls.forEach((el, i, ra) => {
   let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() *10
+    x: Math.random() * (i % 2 === 0 ? -8: 8),
+    y: Math.random() *7
   };
 
   let anim = el.animate(
@@ -43,4 +44,15 @@ balls.forEach((el, i, ra) => {
 window.addEventListener("scroll",function(){
   var header = this.document.querySelector("header")
   header.classList.toggle("sticky",window.scrollY>0)
+})
+
+navbar = document.querySelector(".navbar").querySelectorAll("a")
+console.log(navbar);
+
+navbar.forEach(element => {
+    element.addEventListener("click", function (){
+        navbar.forEach(nav => nav.classList.remove("active"))
+        this.classList.add("active")
+        
+    })
 })
