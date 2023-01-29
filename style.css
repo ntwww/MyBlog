@@ -155,7 +155,7 @@ section {
     width: 500px;
     height: auto;
     border-radius: 100%;
-    
+    box-shadow: 2px 19px 10px -7px rgba(0, 0, 0, 0.3);
 }
 
 
