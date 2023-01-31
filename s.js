@@ -2,7 +2,7 @@
 
 const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
 
-const numBalls = 80;
+const numBalls = 90;
 const balls = [];
 
 for (let i = 0; i < numBalls; i++) {
@@ -22,7 +22,7 @@ for (let i = 0; i < numBalls; i++) {
 // Keyframes
 balls.forEach((el, i, ra) => {
   let to = {
-    x: Math.random() * (i % 2 === 0 ? -8: 8),
+    x: Math.random() * (i % 2 === 0 ? -10: 10),
     y: Math.random() *7
   };
 
